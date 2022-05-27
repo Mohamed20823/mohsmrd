@@ -1,0 +1,727 @@
+:root {
+    --dark-orange:rgb(217, 61, 28);
+      --darkBlue:rgb(31, 31, 46);
+      --orange:rgb(255, 72, 35);
+      --gray:rgb(242, 242, 244);
+      --fontColor:rgb(181, 170, 170);
+      --font-family-sans-serif:'Poppins', sans-serif;
+      --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* Small */
+    @media (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+    /* Medium */
+    @media (min-width: 992px) {
+      .container {
+        width: 970px;
+      }
+    }
+    /* Large */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+    *{
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       box-sizing: border-box;
+       transition-timing-function: ease-in-out;
+       caret-color: var(--orange);
+    }
+    input{
+      color: var(--darkBlue);
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-family-sans-serif);
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    h1,h2,h3,h4,h5,h6,p,span{
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        
+        
+    }
+  
+    h1,h2,h3,h4,h5,h6,p,span{
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        
+        
+    }
+   
+  
+    /* starting header section */
+    header{
+      background-color: var(--darkBlue);
+      color: white;
+      font-size: 13px;
+    }
+    header .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px;
+    }
+    header .container .contact li{
+      display: inline-block;
+      
+    }
+    header .container .contact li i{
+      margin-right:10px ;
+    }
+    header .container .contact li:first-child{
+      padding-right: 15px;
+      border-right: 1px solid white;
+    }
+    header .container .contact li:last-child{
+     padding-left: 15px;
+    }
+    header .container .icons i{
+      margin-left: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    /* ending header section */
+    /* starting nav section */
+    nav {
+    background-color: white;
+    color: var(--orange);
+    }
+    nav .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+    }
+    nav .container .logo li {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 900;
+    }
+    nav .container .logo li i{
+      font-size: 32px;
+    }
+    nav .container .headers> ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    nav .container .headers >ul li a{
+      text-decoration: none;
+      color: var(--darkBlue);
+      padding:0 15px ;
+      font-weight: 500;
+      height: 90px;
+      display:inline-block;
+      transition-duration:0.3s ;
+      line-height: 90px;
+    }
+    nav .container .headers > ul li a:hover{
+      background-color: var(--orange);
+      color: white;
+    }
+    nav .container .link a {
+      display: block;
+      color: white;
+      background-color: var(--orange);
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav .container .link a:hover{
+      background-color: var(--dark-orange);
+    }
+  
+  
+  
+   
+    a.active{
+      background-color: var(--orange);
+      color: white !important;
+    }
+  
+  
+   
+  @media (min-width:992px){
+    nav .container .dropicon{
+      display: none;
+    }
+  }
+   @media (max-width:991px){
+    nav .container .link{
+      display: none;
+    }
+    nav .container .dropicon i{
+      font-size: 30px;
+      cursor: pointer;
+    }
+    nav .container{
+      position: relative;
+  
+    }
+    nav .container .headers {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 100%;
+      height: 0;
+      transition: 0.7s;
+      overflow: hidden;
+      z-index: 1000;
+      background-color: white;
+    }
+    nav .container .headers.free{
+      height: 210px;
+      overflow: visible;
+    }
+  
+    nav .container .headers >ul{
+      flex-direction: column;
+     align-items: flex-start;
+  
+    }
+    nav .container .headers >ul li a,
+    nav .container .headers >ul li
+     {
+      width: 100% !important;
+      height: 35px;
+      line-height: 35px;
+    
+    }
+    
+   }
+   @media (max-width:767px){
+     header .container {
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+     }
+     header .container .contact{
+       margin-bottom: 10px;
+     }
+   }
+    /* ending nav section */
+    /* starting safe section */
+    .safe{
+      
+      background-image: url("../img/car (10).jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: calc(100vh - 350px);
+      position: relative;
+    }
+    .safe::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background-color: rgb(0 0 0 /80%); */
+    }
+    .safe .content{
+      width: 80%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      z-index: 2;
+      
+    }
+    .safe .content .hiding h3{
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--orange); 
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    .safe .content .hiding p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        color: white;
+    }
+    .safe .content .hiding p a{
+        text-decoration: none;
+        color: white;
+        transition: 0.1s;
+    }
+    .safe .content .hiding p span{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .safe .content .hiding p a:hover{
+        text-decoration: underline;
+    }
+    .safe .content .hiding h1{
+      font-size: 60px;
+      color: white;
+      font-weight: 900;
+      margin-top: 20px;
+      
+    }
+    .safe .content form input:first-child:focus{
+      border-color: var(--orange);
+    }
+    .safe .content form input:first-child{
+      margin-right: 0;
+      padding: 15px 10px;
+      outline: none;
+      border: 1px solid transparent;
+      transition: 0.3s;
+      display: inline-block;
+      width: 40%; 
+    }
+    .safe .content form{
+       margin-top: 40px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+    .safe .content form input:last-child{
+     transition: 0.3s;
+      padding:15px 10px ;
+      margin-left: 0;
+      outline: none;
+      display: inline-block;
+      background-color: var(--orange);
+      color: white;
+      border: none;
+      cursor: pointer;
+    
+    }
+    .safe .content form input:last-child:hover{
+      background-color: var(--dark-orange);
+    }
+    @media (max-width:991px){
+      .safe .content .hiding h3{
+      font-size: 10px;  
+      }
+      .safe .content .hiding h1{  
+        font-size: 40px;  
+      }
+      .safe .content form input:last-child,
+      .safe .content form input:first-child{
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .safe .content form input:last-child{
+        margin-top: 10px;
+      }
+   
+    }
+  
+    /* ending safe section */
+    /* start about section */
+    .about {
+      padding: 80px 0 0 0;
+    }
+    
+    .about .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .about .container .truck{
+     width: 40%;
+     margin-right: 20px;
+    }
+    .about .container  .information{
+      width: 50%;
+    }
+    .about .container .truck img{
+      width: 100%;
+      height: 100%;
+      display: block;
+    
+    }
+    .about .container .truck  p{
+      color: var(--darkBlue);
+      background-color: var(--orange);
+      font-size: 28px;
+      font-weight: bold;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 25px 0;
+     text-align: center;
+    }
+    .about .container .information p:first-of-type{
+      color: var(--orange);
+      font-weight: bold;
+    }
+    .about .container .information h1,
+    .abouttwo .container .information >h1{
+      color: var(--darkBlue);
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .about .container .information p:nth-of-type(2),
+    .abouttwo .container .information >h1 + p{
+      color: var(--fontColor);
+      line-height: 1.5;
+    }
+    @media (max-width:991px){
+  
+      .about .container {
+      flex-direction: column;
+      flex-wrap: wrap;
+      }
+      .about .container .truck{
+       width: 100%;
+       margin-bottom: 50px;
+       margin-right: 0;
+      }
+      .about .container  .information{
+        width: 100%;
+      }
+      
+    }
+    @media (max-width:767px){
+      .about .container .information h1{
+        font-size: 27px;
+      }
+    }
+    .abouttwo .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+    .abouttwo .container .information{
+      width: 50%;
+    }
+    .abouttwo .container .information >p:first-of-type{
+      color: var(--orange);
+      font-weight: bold;
+    }
+    .abouttwo .container .information ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 35px;
+    }
+    .abouttwo .container .information ul li span{
+      display: block;
+      color: var(--orange);
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .abouttwo .container .information ul li p{
+      color: var(--darkBlue);
+      font-weight: bold;
+    }
+    .abouttwo .container .form form input{
+      display: block;
+    }
+    .abouttwo .container .form{
+      width: 40%;
+      background-color: var(--orange);
+      padding: 80px 30px;
+    }
+    .abouttwo{
+      background-color: var(--gray);
+    }
+  
+    .abouttwo .container .form form input{
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 13px 15px;
+      outline: none;
+      border: none;
+    }
+    .abouttwo .container .form form input[type="submit"]{
+      background-color: var(--darkBlue);
+      color: white;
+      cursor: pointer;
+       transition:0.3s;
+       text-align: center;
+    }
+    .abouttwo .container .form form input[type="submit"]:hover{
+      background-color: black;
+    }
+    .abouttwo .container .form form input[name="services"]{
+      cursor: pointer;
+    }
+    @media (max-width:991px){
+      .abouttwo .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+   
+       }
+       .abouttwo .container .information{
+         width: 100%;
+         padding: 30px 0 0 0;
+       }
+       .abouttwo .container .form{
+         width: 100%;
+         margin-top: 40px;
+       }
+    }
+    .abouttwo .container .form .srvices{
+      position: relative;
+    }
+    .abouttwo .container .form .srvices ul{
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: white;
+      color: var(--darkBlue);
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+  
+    }
+    .abouttwo .container .form .srvices ul.done{
+     height: 118.2px;
+    }
+    .abouttwo .container .form .srvices ul li{
+      border-bottom: 1px solid var(--darkBlue);
+      padding: 10px;
+      transition: 0.3s;
+    }
+    .abouttwo .container .form .srvices ul li:hover{
+      background-color: var(--orange);
+      color: white;
+    }
+    .abouttwo .container .form .srvices i{
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .abouttwo .container .form .srvices ul{
+      width: 100%;
+    }
+    @media (max-width:767px){
+    .abouttwo .container .information >h1{
+      font-size: 27px;
+    }
+     .abouttwo .container .information ul li  span{
+       font-size: 30px;
+     }
+  }
+    
+    
+    /* ending about section */
+    
+
+
+
+    /* start location section*/
+
+    /* -------contact us page--------- */
+
+
+
+
+.location{
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+}
+.location iframe{
+  width: 100%;
+}
+.contact-us{
+  width: 80%;
+  margin: auto;
+}
+
+.contact-col{
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+.contact-col div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.contact-col div .fas,
+.contact-col div .far{
+  font-size: 28px;
+  color: #f44336;
+  margin: 10px;
+  margin-right: 30px;
+}
+
+.contact-col div p{
+  padding: 0;
+}
+
+.contact-col div h5{
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #f44336;
+font-weight: 400;
+}
+.contact-col input , .contact-col textarea{
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+border: 1px solid #f44336;
+box-sizing: border-box;
+}
+
+
+
+
+
+
+    /* end location section */
+  /* ending temonial section */
+  /* starting footer section */
+  footer{
+    padding-top:80px ;
+    background-color: var(--darkBlue);
+    color: white;
+  }
+  footer .container .contentone{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  
+  }
+  footer .container .contentone >div{
+    width: 24%;
+  }
+  footer .container .contentone >div h2{
+    color: var(--orange);
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  footer .container .contentone .get ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+    transition: 0.2s;
+  
+  }
+  footer .container .contentone .get ul li a:hover{
+    color: var(--darkBlue);
+    background-color: white;
+  }
+  footer .container .contentone .get ul li a:not(:first-child){
+    margin-left: 10px;
+  }
+  
+  footer .container .contentone .get ul li {
+    margin-bottom: 20px;
+  }
+  footer .container .contentone .links ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: 0.1s;
+  
+  }
+  footer .container .contentone .links ul li a:hover{
+    text-decoration: underline;
+  }
+  footer .container .contentone .links ul li:not(:last-child){
+    margin-bottom: 13px;
+  }
+  footer .container .contentone .links ul li a i{
+    margin-right:4px ;
+  }
+  footer .container .contentone .letter p{
+    line-height: 1.5;
+    margin-bottom: 10px;
+  
+  }
+  footer .container {
+    width: 90%;
+  }
+  footer .container .contentone .letter form {
+    display: flex;
+    
+  }
+  footer .container .contentone .letter form input:first-child{
+    width: 100%;
+  }
+  
+  footer .container .contentone .letter form input{
+  
+    margin: 0;
+    outline: none;
+    border: none;
+   padding: 15px 7px;
+   transition: 0.3s;
+  }
+  footer .container .contentone .letter form input:last-child{
+    background-color: var(--orange);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  footer .container .contentone .letter form input:last-child:hover{
+    background-color: var(--dark-orange);
+  }
+  @media (max-width:991px){
+    footer .container .contentone >div {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+  footer .container .contenttwo{
+   padding: 20px 0;
+    color: white;
+    border-top: 0.1px solid white;
+    text-align: center;
+    
+  }
+  footer .container .contenttwo span{
+    color: var(--orange);
+  }
+  
+  /* ending footer section */
+  
+  
